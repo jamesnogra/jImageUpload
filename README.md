@@ -17,11 +17,21 @@ In your form view:
 
 <!-- you can put this anywhere you want -->
 <script type="text/javascript">
-  var test1 = new jImageUpload("my-file", "images/");
+  	var test1 = new jImageUpload("my-file", "images/");
 	function checkUploadedFile() { //required function to get image upload details
 		console.log(data_results[test1.id]);
 		alert("File name: " + data_results[test1.id]["file_name"]);
 		alert("Full path: " + data_results[test1.id]["full_path"]);
 	}
 </script>
+```
+
+
+If you want to have an image uploader WITHOUT the default preview, just change this line
+```html
+var test1 = new jImageUpload("my-file", "images/");
+```
+to
+```html
+var test1 = new jImageUpload("my-file", "images/", false);
 ```
