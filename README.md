@@ -26,8 +26,7 @@ In your form view:
 </script>
 ```
 
-
-If you want to have an image uploader WITHOUT the default preview, just change this line
+If you want to have an image uploader WITHOUT the default preview, just change this line:
 ```html
 var test1 = new jImageUpload("my-file", "images/");
 ```
@@ -35,3 +34,9 @@ to
 ```html
 var test1 = new jImageUpload("my-file", "images/", false);
 ```
+
+If you want to use the default preview thumbnail but resize the image size, then use this:
+```html
+var test1 = new jImageUpload("my-file", "images/", true, 200);
+```
+200 means that the image will have a height of 200.
